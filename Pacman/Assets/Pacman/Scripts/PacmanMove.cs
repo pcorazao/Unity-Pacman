@@ -17,25 +17,25 @@ public class PacmanMove : MonoBehaviour {
 
 	void Update()
 	{
-//		#if  UNITY_STANDALONE || UNITY_WEBPLAYER || UNITY_EDITOR
-//		//		 Check for Input if not moving
-//		if (Input.GetKey(KeyCode.UpArrow) && valid(Vector2.up))
-//		{
-//			direction = DirectionType.up;
-//		}
-//		else if (Input.GetKey(KeyCode.DownArrow) && valid(-Vector2.up))
-//		{
-//			direction = DirectionType.down;
-//		}
-//		else if (Input.GetKey(KeyCode.LeftArrow) && valid(-Vector2.right))
-//		{
-//			direction = DirectionType.left;
-//		}
-//		else if (Input.GetKey(KeyCode.RightArrow) && valid(Vector2.right))
-//		{
-//			direction = DirectionType.right;
-//		}
-//		#else
+		#if  UNITY_STANDALONE || UNITY_WEBPLAYER || UNITY_EDITOR
+		//		 Check for Input if not moving
+		if (Input.GetKey(KeyCode.UpArrow) && valid(Vector2.up))
+		{
+			direction = DirectionType.up;
+		}
+		else if (Input.GetKey(KeyCode.DownArrow) && valid(-Vector2.up))
+		{
+			direction = DirectionType.down;
+		}
+		else if (Input.GetKey(KeyCode.LeftArrow) && valid(-Vector2.right))
+		{
+			direction = DirectionType.left;
+		}
+		else if (Input.GetKey(KeyCode.RightArrow) && valid(Vector2.right))
+		{
+			direction = DirectionType.right;
+		}
+		#else
 		if(Input.touchCount > 0)
 		{
 			Touch myTouch = Input.touches[0];
@@ -73,7 +73,7 @@ public class PacmanMove : MonoBehaviour {
 				}
 			}
 		}
-//		#endif
+		#endif
 	}
 	
 	// Update is called once per frame
